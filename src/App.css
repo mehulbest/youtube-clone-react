@@ -1,0 +1,107 @@
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+
+.video-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.video-card video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.video-card h4 {
+  margin: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #0f0f0f;
+}
+
+
+/* Suggested Videos */
+.suggested-video {
+  cursor: pointer;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.suggested-video video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #181818;
+  color: white;
+}
+
+.dark-mode nav {
+  background-color: #202020 !important;
+}
+
+.dark-mode input, 
+.dark-mode button {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.dark-mode .video-card {
+  background-color: #282828;
+}
+
+.dark-mode .video-card h4 {
+  color: #eee;
+}
+
+.dark-mode .suggested-video {
+  border-bottom: 1px solid #444;
+}
+
+.dark-mode .suggested-video video {
+  background-color: #282828;
+}
+
+.dark-mode footer {
+  background-color: #202020;
+  color: #bbb;
+}
